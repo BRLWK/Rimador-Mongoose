@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>	
+
+<!-- less severe trait-->
+  <TraitDef>
+    <defName>VFEP_MogTrait</defName>
+    <commonality>0</commonality>
+	<disabledWorkTags>
+    <li>Animals</li>
+	  <li>Artistic</li>
+	  <li>Caring</li>
+	  <li>Intellectual</li>
+    <li>Crafting</li>
+    <li>Cooking</li>
+	</disabledWorkTags>
+    <degreeDatas>
+      <li>
+        <label>Mongoose entombed.</label>
+        <description>{PAWN_nameDef} is entombed in a mongoose. Neural dampening will lower pain's effect on them, and they are significantly better at manual labor and construction. Because of how bulky the armor is and how much energy it takes to use it, {PAWN_nameDef} is not capable of doing any invovled, skilled work such as research or animal handling.</description>
+      </li>
+    </degreeDatas>
+    <modExtensions>
+        <li Class="VFECore.TraitExtension">
+            <painFactor>0.2</painFactor>
+        </li>
+    </modExtensions>
+  </TraitDef>
+
+    <!--==== originally used with walker gear framework ====-->
+    
+    <!--equippedStatOffsets>
+      <Flammability>-0.5</Flammability>
+      <MeleeDodgeChance>-1</MeleeDodgeChance>
+      <Comfort>-1</Comfort>
+      <PsychicSensitivity>-0.3</PsychicSensitivity>
+      <ShootingAccuracyPawn>+0.2</ShootingAccuracyPawn>
+      <ToxicSensitivity>-1</ToxicSensitivity>
+      <HungerRateMultiplier>0.2</HungerRateMultiplier>
+      <CarryingCapacity>+1.5</CarryingCapacity>
+      <ArrestSuccessChance>+0.1</ArrestSuccessChance>
+      <SocialImpact>-0.2</SocialImpact>
+      <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.15</SlaveSuppressionOffset>
+
+      <====good for labor===-->
+      <!--MiningSpeed>+0.3</MiningSpeed>
+      <DeepDrillingSpeed>+0.2</DeepDrillingSpeed>
+      <MiningYield>+0.2</MiningYield>
+      <SmoothingSpeed>+0.1</SmoothingSpeed>
+      <ResearchSpeed>-2</ResearchSpeed>
+      <AnimalGatherSpeed>-1</AnimalGatherSpeed>
+      <AnimalGatherYield>-1</AnimalGatherYield>
+      <HuntingStealth>-1.5</HuntingStealth>
+      <ConstructionSpeed>+0.3</ConstructionSpeed>
+      <ConstructSuccessChance>0.1</ConstructSuccessChance>
+      <MedicalTendQuality>-2</MedicalTendQuality>
+      <MedicalSurgerySuccessChance>-2</MedicalSurgerySuccessChance>
+      <GeneralLaborSpeed>+0.3</GeneralLaborSpeed>
+      <SmeltingSpeed>+0.2</SmeltingSpeed>
+      <FoodPoisonChance>+2</FoodPoisonChance>
+      <ButcheryMechanoidSpeed>+0.2</ButcheryMechanoidSpeed>
+      <ButcheryFleshEfficiency>-0.5</ButcheryFleshEfficiency>
+    </equippedStatOffsets-->
+
+<!-- Basic Mongoose -->
+	<VFEPirates.WarcasketDef ParentName="VFEP_WarcasketArmorBase">
+		<defName>VFEP_M841_Base</defName>
+		<label>M841 "Mongoose"</label>
+		<ignoreIllegalLabelCharacterConfigError>true</ignoreIllegalLabelCharacterConfigError>
+		<shortDescription>The M841 Mog, requires 1 of each [M841] module for full functionality/protection. This is the main chassis featuring a basic labor suite and defensive smoke launchers.</shortDescription>
+		<description>A Novo Solo variant on the basic pattern of powersuit/heavy lifter that's served all over the outer colonies. The average NEP Mongoose, or Mog, has been decommissioned, retrofitted, rebuilt, scrapped, demilitarized and recommissioned so many times they have a bad reputation with recruits. Even after a complete rebuild, the cranial jack tends to retain... a certain personality, let's say. Rookie Mog drivers would call it a ghost, but that's being dramatic about issues with biofeedback. Tough, versatile, the Mog is the backbone of mechanized infantry, and so ubiquitous that 'mog' became a catch-all for powersuits as a whole. They may just be so much scrap underfoot of a Touro, but coordinated attacks from an entire squad is no joke.\n\n-MB</description>
+		<graphicData>
+			<texPath>Things/Pawn/Warcasketlike/Mog/Mongoose</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+      		<shaderType>CutoutComplex</shaderType>
+		</graphicData>
+		<statBases>
+			<Mass>2500</Mass>
+			<ArmorRating_Sharp>1.26</ArmorRating_Sharp>
+			<ArmorRating_Blunt>1.05</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.50</ArmorRating_Heat>
+			<Insulation_Cold>0</Insulation_Cold>
+			<Insulation_Heat>0</Insulation_Heat>
+			<EquipDelay>1</EquipDelay>
+		</statBases>
+
+		<equippedStatOffsets>
+      <!-- base mog no upgrades -->
+     		<MeleeDodgeChance>-1.5</MeleeDodgeChance>
+     		<ArrestSuccessChance>+0.1</ArrestSuccessChance>
+     		<SocialImpact>-0.2</SocialImpact>
+     		<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.15</SlaveSuppressionOffset>
+     		<!--====good for labor===-->
+     		<MiningSpeed>+0.10</MiningSpeed>
+     		<DeepDrillingSpeed>+0.1</DeepDrillingSpeed>
+     		<MiningYield>+0.1</MiningYield>
+     		<SmoothingSpeed>+0.05</SmoothingSpeed>
+     		<HuntingStealth>-1.5</HuntingStealth>
+     		<ConstructionSpeed>+0.10</ConstructionSpeed>
+     		<ConstructSuccessChance>0.05</ConstructSuccessChance>
+     		<GeneralLaborSpeed>+0.10</GeneralLaborSpeed>
+     		<SmeltingSpeed>+0.10</SmeltingSpeed>
+     		<ButcheryMechanoidSpeed>+0.1</ButcheryMechanoidSpeed>
+		</equippedStatOffsets>
+
+		<costList>
+			<ComponentIndustrial>8</ComponentIndustrial>
+			<Steel>800</Steel>
+			<Uranium>50</Uranium>
+      		<Plasteel>110</Plasteel>
+      		<ComponentSpacer>1</ComponentSpacer>
+		</costList>
+
+		<apparel>
+			<bodyPartGroups>
+        		<li>Torso</li>
+				<li>Legs</li>
+				<li>Feet</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Things/Pawn/Warcasketlike/Mog/Mongoose</wornGraphicPath>
+			<useWornGraphicMask>true</useWornGraphicMask>
+			<layers>
+			    <li>OnSkin</li>
+				<li>Middle</li>
+				<li>Shell</li>
+			</layers>
+			<tags>
+				<li>MogPilot</li>
+			</tags>
+		</apparel>
+
+		<researchPrerequisites>
+			<li>Rimador_Mongoose_Tier1</li>
+		</researchPrerequisites>
+
+		<comps>
+		 	<li Class="VFECore.CompProperties_ApparelHediffs">
+			  <hediffDefnames>
+			    <li>MongoosePowered</li>
+			    <li>Mog_Stomp</li>
+			  </hediffDefnames>
+			</li>
+			  <li Class="CompProperties_Reloadable">
+              <maxCharges>12</maxCharges>
+              <ammoDef>Chemfuel</ammoDef>
+              <ammoCountPerCharge>6</ammoCountPerCharge>
+              <baseReloadTicks>60</baseReloadTicks>
+              <soundReload>Standard_Reload</soundReload>
+              <hotKey>Misc5</hotKey>
+              <chargeNoun>smoke grenades</chargeNoun>
+              <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+          	</li>
+    	</comps>
+
+		<verbs>
+			<li Class="VFEPirates.VerbProps_MultipleProjectiles">
+				<label>smokescreen</label>
+				<verbClass>VFEPirates.Verb_LaunchProjectileStaticMultiple</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<onlyManualCast>True</onlyManualCast>
+				<range>6.9</range>
+				<forcedMissRadius>4</forcedMissRadius>
+				<warmupTime>2</warmupTime>
+				<noiseRadius>3</noiseRadius>
+				<projectileCount>3</projectileCount>
+				<commandIcon>UI/Abilities/GrenadeBarrage</commandIcon>
+				<ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+				<soundCast>Shot_IncendiaryLauncher</soundCast>
+				<soundCastTail>GunTail_Light</soundCastTail>
+				<muzzleFlashScale>2</muzzleFlashScale>
+				<drawHighlightWithLineOfSight>true</drawHighlightWithLineOfSight>
+				<targetParams>
+				<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+				<defaultProjectile>Bullet_Mog_SmokeGrenade</defaultProjectile>
+				<rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+			</li>
+		</verbs>
+
+		<modExtensions Inherit="False">
+			<li Class="VFECore.ApparelDrawPosExtension">
+				<shellPosDrawSettings>
+					<drawPosNorthOffset>(0, 0.1, 0)</drawPosNorthOffset>
+					<drawPosSouthOffset>(0, 0, 0)</drawPosSouthOffset>
+					<drawPosWestOffset>(-0.03, 0, 0)</drawPosWestOffset>
+					<drawPosEastOffset>(0.03, 0, 0)</drawPosEastOffset>
+					<drawSize>(2.3, 2.3)</drawSize>
+				</shellPosDrawSettings>
+				<isUnifiedApparel>true</isUnifiedApparel>
+				</li>
+
+			<li Class="VFECore.ApparelExtension">
+				<traitsOnEquip>
+					<li>VFEP_MogTrait</li>
+				</traitsOnEquip>
+				<traitsOnUnequip>
+					<li>VFEP_Shellcasket</li>
+				</traitsOnUnequip>
+				<carryingCapacity>75</carryingCapacity>
+				<pawnCapacityMinLevels>
+					<li>
+						<capacity>Moving</capacity>
+						<minLevel>0.8</minLevel>
+					</li>
+					<li>
+						<capacity>Manipulation</capacity>
+						<minLevel>0.8</minLevel>
+					</li>
+				</pawnCapacityMinLevels>
+			</li>
+		</modExtensions>
+    
+	</VFEPirates.WarcasketDef>
+
+	<ThingDef ParentName="BaseBullet">
+    <defName>Bullet_Mog_SmokeGrenade</defName>
+    <label>smoke grenade</label>
+    <graphicData>
+      <texPath>Things/Projectile/MogSmokeGrenade</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    <projectile>
+      <speed>10</speed>
+      <damageDef>Smoke</damageDef>
+      <!-- Use default damage from explosion def -->
+      <explosionRadius>2.5</explosionRadius>
+      <postExplosionSpawnThingDef>Gas_Smoke</postExplosionSpawnThingDef>
+      <postExplosionSpawnChance>1</postExplosionSpawnChance>
+      <ai_IsIncendiary>true</ai_IsIncendiary>
+      <arcHeightFactor>0.9</arcHeightFactor>
+      <shadowSize>0.6</shadowSize>
+    </projectile>
+  </ThingDef>
+
+  
+
+</Defs>

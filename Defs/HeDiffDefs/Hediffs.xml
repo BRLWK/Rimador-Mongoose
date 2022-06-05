@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs> 
+
+    <HediffDef>
+        <defName>MogReboot</defName>
+        <label>rebooting system...</label>
+        <description>Rebooting the mongoose's classifier AI.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <isBad>true</isBad>
+        <stages>
+          <li>
+            <capMods>
+              <li>
+                <capacity>Moving</capacity>
+                <setMax>0.3</setMax>
+              </li>
+              <li>
+                <capacity>Manipulation</capacity>
+                <setMax>0.2</setMax>
+              </li>
+            </capMods>
+          </li>
+        </stages>
+        <comps>
+        <li Class="HediffCompProperties_Disappears">
+            <showRemainingTime>True</showRemainingTime>
+            <disappearsAfterTicks>600~900</disappearsAfterTicks> <!-- 10 - 15 secs -->
+        </li>
+        <li Class="HediffCompProperties_DisappearsOnDeath"/>
+        </comps>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>MongoosePowered</defName>
+        <label>mog electronics systems</label>
+        <description>A classifier AI assists the pilot with intrepeting movement, any EMP attacks will cause the computer to reset.\n\nWhile the arms are too unweildy to use as weapons, the mongoose's heavy armored legs are capable of a devestating crush attack.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(1, 1, 1)</defaultLabelColor>
+        <isBad>false</isBad>
+        <comps>
+          <li Class="HediffCompProperties_ReactOnDamage">
+            <damageDefIncoming>EMP</damageDefIncoming>
+            <createHediff>MogReboot</createHediff>
+          </li>
+          <li Class="HediffCompProperties_DisappearsOnDeath"/>
+        </comps>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>Mog_Stomp</defName>
+        <label>mongoose stomp</label>
+        <description>mongoose stomp</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <stages>
+          <li>
+            <becomeVisible>false</becomeVisible>
+          </li>
+        </stages>
+        <comps>
+          <li Class="HediffCompProperties_VerbGiver">
+            <tools>
+              <li>
+                <label>foot</label>
+                <capacities>
+                  <li>Blunt</li>
+                </capacities>
+                <power>50</power>
+                <cooldownTime>5</cooldownTime>
+                <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+                <soundMeleeHit>Stomp_Mog</soundMeleeHit>
+                <soundMeleeMiss>Stomp_Mog</soundMeleeMiss>
+              </li>
+            </tools>
+          </li>
+          <li Class="HediffCompProperties_DisappearsOnDeath"/>
+        </comps>
+    </HediffDef>
+
+</Defs>

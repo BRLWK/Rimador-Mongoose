@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+<SoundDef>
+    <defName>Shot_Bonesaw</defName>  
+    <context>MapOnly</context>  
+    <maxVoices>8</maxVoices>  
+    <maxSimultaneous>4</maxSimultaneous> 
+    <subSounds>
+      <li>
+        <muteWhenPaused>True</muteWhenPaused>    
+        <tempoAffectedByGameSpeed>true</tempoAffectedByGameSpeed>  
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Weapons/Bonesaw</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>25.52942~25.52942</volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Stomp_Mog</defName>  
+    <context>MapOnly</context>  
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Weapons/Mog_stomp</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>30~30</volumeRange>      
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+</Defs>

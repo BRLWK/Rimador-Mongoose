@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>Rimador - Mongoose</name>
+  	<author>Bx395</author>
+    <supportedVersions>
+		<li>1.3</li>
+	</supportedVersions>
+	<packageId>Bx395.RimadorMongoose</packageId>
+    <modDependencies>
+        <li>
+			<packageId>OskarPotocki.VanillaFactionsExpanded.Core</packageId>
+			<displayName>Vanilla Expanded Framework</displayName>
+			<steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=1854607105</steamWorkshopUrl>
+		</li>
+        <li>
+			<packageId>OskarPotocki.VFE.Pirates</packageId>
+			<displayName>Vanilla Factions Expanded - Pirates</displayName>
+			<steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2723801948</steamWorkshopUrl>
+		</li>
+		<li>
+			<packageId>CarnySenpai.EnableOversizedWeapons</packageId>
+			<displayName>Enable Oversized Weapons</displayName>
+			<steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2543371889</steamWorkshopUrl>
+		</li>
+	</modDependencies>
+	<description>Adds the mongoose from Brigador with some fixed loadouts.</description>
+</ModMetaData>

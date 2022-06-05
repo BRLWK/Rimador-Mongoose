@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!--==== Tier  1 ====-->
+
+  <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketShoulderPadBase">
+  	<defName>VFEP_MogShoulders_Standard</defName>
+  	<label>[M841] Basic labor package</label>
+  	<shortDescription>Two dexterous arms that provide significant labor power to the Mongoose. Can also manipulate and use warcasket weaponry.</shortDescription>
+  	<description>"Twin 8mm machine guns were raised on the Mog's arms pointing to the ceiling in a stowed or safe position. The whole machine had a fresh coat of olive drab paint on it, but even that couldn't hide the age of the thing. Adapted from an older design that the first colonists brought with them, the Mongoose was a bastard of a machine. Those colonists used to strip them down to bare minimum functionality, so they could be mass produced with the limited resources at their disposal. The Troubles put an end to that however. Now they were stuck with rust buckets, forced to constantly cannibalize what they had left and repair their aging arsenal, all to maintain the military's precarious position of power over the populace."</description>
+  	<ignoreIllegalLabelCharacterConfigError>true</ignoreIllegalLabelCharacterConfigError>
+	<graphicData>
+  		<texPath>Things/Pawn/Warcasketlike/Dummies/Dummy</texPath>
+  	</graphicData>
+  	<statBases>
+  		<Mass>500</Mass>
+  		<ArmorRating_Sharp>1.26</ArmorRating_Sharp>
+		<ArmorRating_Blunt>1.05</ArmorRating_Blunt>
+		<ArmorRating_Heat>0.50</ArmorRating_Heat>
+		<Insulation_Cold>14</Insulation_Cold>
+		<Insulation_Heat>7</Insulation_Heat>
+  		<EquipDelay>1</EquipDelay>
+  	</statBases>
+  	<equippedStatOffsets>
+  		<MiningSpeed>+0.20</MiningSpeed>
+     	<DeepDrillingSpeed>+0.2</DeepDrillingSpeed>
+     	<MiningYield>+0.2</MiningYield>
+     	<SmoothingSpeed>+0.15</SmoothingSpeed>
+     	<ConstructionSpeed>+0.20</ConstructionSpeed>
+     	<ConstructSuccessChance>+0.10</ConstructSuccessChance>
+     	<GeneralLaborSpeed>+0.1</GeneralLaborSpeed>
+     	<SmeltingSpeed>+0.15</SmeltingSpeed>
+     	<ButcheryMechanoidSpeed>+0.1</ButcheryMechanoidSpeed>
+  	</equippedStatOffsets>
+  	<costList>
+  		<Steel>40</Steel>
+        <ComponentIndustrial>8</ComponentIndustrial>
+  	</costList>
+  	<researchPrerequisites>
+  		<li>Rimador_Mongoose_Tier1</li>
+  	</researchPrerequisites>
+  	<apparel>
+  		<bodyPartGroups>
+  			<li>Shoulders</li>
+  			<li>Arms</li>
+  			<li>Hands</li>
+  			<li>Neck</li>
+  		</bodyPartGroups>
+  		<wornGraphicPath>Things/Pawn/Warcasketlike/Dummies/Dummy</wornGraphicPath>
+  		<layers>
+  			<li>OnSkin</li>
+  			<li>Middle</li>
+  			<li>Shell</li>
+  		</layers>
+  		<tags>
+  			<li>MogPilot</li>
+  		</tags>
+  	</apparel>
+  </VFEPirates.WarcasketDef>
+
+  <VFEPirates.WarcasketDef ParentName="VFEP_WarcasketHelmetBase">
+	  <defName>VFEP_MogHeadgear_Standard</defName>
+	  <label>[M841] Survival Package</label>
+	  <shortDescription>An optics and targeting package, air scrubber, fire proofing, and a basic hardshield keep the pilot alive but far from comfortable.</shortDescription>
+	  <description>Basic survival package that contains all the necessities for extended operations in the Mog. The optics and targeting package is cheap but easily mass-produced. The air scrubber and fireproofing will keep a pilot alive in combat but isn't suited to deal with incendiary weapons or prolonged exposure to heavy contaminants. Finally, the shield is substantial for a powersuit but is meant to be recharged outside of combat.</description>
+	  <ignoreIllegalLabelCharacterConfigError>true</ignoreIllegalLabelCharacterConfigError>
+	  <graphicData>
+	  	<texPath>Things/Pawn/Warcasketlike/Dummies/Dummy</texPath>
+	  </graphicData>
+	  <uiIconScale>1.25</uiIconScale>
+	  <statBases>
+	  	<Mass>500</Mass>
+  		<ArmorRating_Sharp>1.26</ArmorRating_Sharp>
+		<ArmorRating_Blunt>1.05</ArmorRating_Blunt>
+		<ArmorRating_Heat>0.50</ArmorRating_Heat>
+		<Insulation_Cold>17</Insulation_Cold>
+		<Insulation_Heat>11</Insulation_Heat>
+  		<EquipDelay>1</EquipDelay>
+	  </statBases>
+	  <equippedStatOffsets>
+	  	<MoveSpeed>-0.7</MoveSpeed>
+		<Flammability>-0.5</Flammability>
+		<Comfort>-1</Comfort>
+     	<PsychicSensitivity>-0.11</PsychicSensitivity>
+     	<ToxicSensitivity>-0.25</ToxicSensitivity>
+     	<HungerRateMultiplier>0.05</HungerRateMultiplier>
+	  </equippedStatOffsets>
+	  <costList>
+	  	<ComponentIndustrial>5</ComponentIndustrial>
+	  	<Steel>40</Steel>
+		<Plasteel>10</Plasteel>
+	  </costList>
+	  <researchPrerequisites>
+	  	<li>VFEP_Warcaskets</li>
+	  </researchPrerequisites>
+	  <apparel>
+	  	<bodyPartGroups>
+	  		<li>FullHead</li>
+	  	</bodyPartGroups>
+	  	<wornGraphicPath>Things/Pawn/Warcasketlike/Dummies/Dummy</wornGraphicPath>
+	  	<layers>
+	  		<li>Overhead</li>
+	  	</layers>
+	  	<tags>
+	  		<li>Warcasket</li>
+	  		<li>WarcasketVeteran</li>
+	  		<li>WarcasketAll</li>
+	  	</tags>
+	  </apparel>
+	  <comps>
+		<li Class="VFECore.CompProperties_ShieldBubble">
+		  <compClass>VFECore.CompShieldBubble</compClass>
+		  <blockRangedAttack>true</blockRangedAttack>
+		  <blockMeleeAttack>false</blockMeleeAttack>
+		  <showWhenDrafted>true</showWhenDrafted>
+		  <showOnHostiles>true</showOnHostiles>
+		  <showOnNeutralInCombat>true</showOnNeutralInCombat>
+		  <shieldTexPath>Other/ShieldBubble</shieldTexPath>
+		  <EnergyShieldRechargeRate>5</EnergyShieldRechargeRate>
+		  <EnergyShieldEnergyMax>100</EnergyShieldEnergyMax>
+		  <chargeFullyWhenMade>true</chargeFullyWhenMade>
+		  <minShieldSize>3</minShieldSize>
+		  <maxShieldSize>4</maxShieldSize>
+		  <disableRotation>true</disableRotation>
+		</li>
+		</comps>
+	</VFEPirates.WarcasketDef>
+
+</Defs>
